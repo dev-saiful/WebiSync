@@ -10,7 +10,7 @@ const addToActiveCampaignCron = async (AC_API_KEY,SYNC_API_URL,TAG_API_URL,tagId
       throw new Error("Invalid registrant data");
     }
 
-    console.log(`🚀 Processing ${contacts.length} contacts for tag ID ${tagId}`);
+    // console.log(`🚀 Processing ${contacts.length} contacts for tag ID ${tagId}`);
 
     for (const contact of contacts) {
       const { first_name, last_name, phone, email } = contact;
@@ -60,7 +60,7 @@ const addToActiveCampaignCron = async (AC_API_KEY,SYNC_API_URL,TAG_API_URL,tagId
           },
         });
 
-        console.log(`✅ Tagged ${email} with tag ID ${tagId}`);
+        // console.log(`✅ Tagged ${email} with tag ID ${tagId}`);
 
       } catch (err) {
         console.error(`❌ Failed for ${email}:`, err.response?.data || err.message);

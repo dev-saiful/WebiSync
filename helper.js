@@ -26,7 +26,7 @@ const getWebinarDate = async (WEBINAR_ID) => {
     if (schedules.length > 0) {
       // console.log(response.data);
       const schedule = schedules[0];
-      console.log(schedule);
+      // console.log(schedule);
       return schedule;
     }
   } catch (error) {
@@ -89,7 +89,7 @@ const getRegistrants = async (WEBINAR_ID) => {
         }))
       );
     }
-    console.log(allRegistrants);
+    // console.log(allRegistrants);
     return allRegistrants;
   } catch (error) {
     console.error(
